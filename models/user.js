@@ -15,7 +15,7 @@ const userSchema = new Schema(
         type: String,
         unique:true,
         required: true,
-        match: ['.com']
+        //  match: ['.com']
         },
 
         thoughts: [Thoughtmodel],
