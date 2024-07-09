@@ -13,7 +13,7 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        reaction:  [reactionSchema],
+        reaction:  [],
         createdAt:
         {
             type: Date,

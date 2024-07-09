@@ -18,9 +18,9 @@ const userSchema = new Schema(
         //  match: ['.com']
         },
 
-        thoughts: [Thoughtmodel],
+        thoughts: [],
 
-        friends: [Usermodel],
+        friends: [],
     },
     {
         toJSON:
@@ -31,7 +31,7 @@ const userSchema = new Schema(
     }
 );
 
-thoughtSchema.virtual('friendCount').get(function(){
+userSchema.virtual('friendCount').get(function(){
     return this.friends.length;
 });
 

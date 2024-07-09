@@ -1,9 +1,10 @@
 
 
-const getRandomValues=(array)=>
+function getRandomValues(objectarray)
 {
-const max= array.lenght;
-return Math.floor(Math.random()*max)
+const max= objectarray.length;
+const num =Math.floor(Math.random()*max);
+return num;
 };
 
 const username=[
@@ -14,28 +15,28 @@ const username=[
     'marvelousfanny',
 ];
 
-const reactions = [
-    ("Thanks for saying that, im now uncomfortable.", getRandomValues(username)),
-    ("I agree.",getRandomValues(username)),
-    ("I disagree.",getRandomValues(username)),
-    ("I VIOLENTLY disagree.",getRandomValues(username)),
-    ("Where am i?",getRandomValues(username)),
+const reactionsdata = [
+    {reactionBody: "Thanks for saying that, im now uncomfortable.", username: username[getRandomValues(username)]},
+    {reactionBody: "I agree.",username: username[getRandomValues(username)]},
+    {reactionBody: "I disagree.",username: username[getRandomValues(username)]},
+    {reactionBody: "I VIOLENTLY disagree.",username: username[getRandomValues(username)]},
+    {reactionBody: "Where am i?",username: username[getRandomValues(username)]},
 ];
 
-const thoughts=[
-    ("If I see a bug, I simply leave.",username[0],[getRandomValues(reactions)]),
-   ( " What if I’m underthinking?", username[1],[getRandomValues(reactions)]),
-    ("You're not a beast at all. YOU'RE A HERO", username[4],[getRandomValues(reactions)]),
-    ("It's called cauliflower, not ghost broccoli.",username[2],[getRandomValues(reactions)]),
-    ('sometimes it’s nice being held.',username[3],[getRandomValues(reactions)]),
+const thoughtsdata=[
+    {thoughtText:"If I see a bug, I simply leave.",username: username[0],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
+   { thoughtText:" What if I’m underthinking?", username: username[1],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
+    {thoughtText:"You're not a beast at all. YOU'RE A HERO", username: username[4],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
+    {thoughtText:"It's called cauliflower, not ghost broccoli.",username: username[2],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
+    {thoughtText:'sometimes it’s nice being held.',username: username[3],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
 ];
 
 const usersdata= [
-('proclaimretire', 'Bhoney808@gmail.com',[ thoughts[4]]),
-('nothingrolls','Turberculosisis@hotmail.com',[thoughts[1]]),
-('preferenceblueberries','Pathology@yahoo.com',[thoughts[3]]),
-('resistanceyelp','X55063@pwc.gov',[thoughts[0]]),
-('marvelousfanny','JohnJohnson@john.com',['Feeling adventurous',thoughts[2]]),
+{username: 'proclaimretire', email:'Bhoney808@gmail.com', thoughts: [thoughtsdata[4]]},
+{username: 'nothingrolls',email: 'Turberculosisis@hotmail.com', thoughts: [thoughtsdata[1]]},
+{username:'preferenceblueberries',email:'Pathology@yahoo.com',thoughts:[thoughtsdata[3]]},
+{username:'resistanceyelp',email:'X55063@pwc.gov',thoughts:[thoughtsdata[0]]},
+{username:'marvelousfanny',email:'JohnJohnson@john.com',thoughts:['Feeling adventurous',thoughtsdata[2]]},
 ];
 
 
