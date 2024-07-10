@@ -18,10 +18,10 @@ connection.once('open',async () => {
     await connection.dropCollection('thoughts');
     }
 
-    //await Users.insertMany(usersdata);
+    await Users.insertMany(usersdata);
     await Thoughts.insertMany(thoughtsdata);
 
-   // console.table(usersdata);
+    console.table(usersdata);
     console.table(thoughtsdata);
     console.info('Seeding complete! 🌱');
     process.exit(0);
