@@ -24,19 +24,20 @@ const reactionsdata = [
 ];
 
 const thoughtsdata=[
-    {thoughtText:"If I see a bug, I simply leave.",username: username[0],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
-   { thoughtText:" What if I’m underthinking?", username: username[1],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
-    {thoughtText:"You're not a beast at all. YOU'RE A HERO", username: username[4],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
-    {thoughtText:"It's called cauliflower, not ghost broccoli.",username: username[2],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
-    {thoughtText:'sometimes it’s nice being held.',username: username[3],reaction: [reactionsdata[getRandomValues(reactionsdata)]]},
+    {thoughtText:"If I see a bug, I simply leave.",username: username[0]},
+   { thoughtText:" What if I’m underthinking?", username: username[1]},
+    {thoughtText:"You're not a beast at all. YOU'RE A HERO", username: username[4]},
+    {thoughtText:"It's called cauliflower, not ghost broccoli.",username: username[2]},
+    {thoughtText:'sometimes it’s nice being held.',username: username[3]},
 ];
 
+
 const usersdata= [
-{username: 'proclaimretire', email:'Bhoney808@gmail.com', thoughts: [thoughtsdata[4]]},
-{username: 'nothingrolls',email: 'Turberculosisis@hotmail.com', thoughts: [thoughtsdata[1]]},
-{username:'preferenceblueberries',email:'Pathology@yahoo.com',thoughts:[thoughtsdata[3]]},
-{username:'resistanceyelp',email:'X55063@pwc.gov',thoughts:[thoughtsdata[0]]},
-{username:'marvelousfanny',email:'JohnJohnson@john.com',thoughts:['Feeling adventurous',thoughtsdata[2]]},
+{username: 'proclaimretire', email:'Bhoney808@gmail.com'},
+{username: 'nothingrolls',email: 'Turberculosisis@hotmail.com' },
+{username:'preferenceblueberries',email:'Pathology@yahoo.com'},
+{username:'resistanceyelp',email:'X55063@pwc.gov'},
+{username:'marvelousfanny',email:'JohnJohnson@john.com'},
 ];
 
 

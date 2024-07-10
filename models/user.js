@@ -2,6 +2,7 @@ const { Schema, model } = require('mongoose');
 
 
 
+
 const userSchema = new Schema(
     {
         username:
@@ -18,9 +19,19 @@ const userSchema = new Schema(
         //  match: ['.com']
         },
 
-        thoughts: [],
+        thoughts: [ 
+            {
+            type: Schema.Types.ObjectId,
+            ref:"thoughts",
+            }
+        ],
 
-        friends: [],
+        friends: [
+            {
+            type: Schema.Types.ObjectId,
+            ref: "user",
+            }
+        ],
     },
     {
         toJSON:
